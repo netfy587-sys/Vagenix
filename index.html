@@ -1,0 +1,184 @@
+<body>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;color:#222b38;background:#f6f8fb;line-height:1.8}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px;margin:0 auto;padding:0 20px}
+header{background:#1f2937;position:sticky;top:0;z-index:9}
+.nav{display:flex;justify-content:space-between;align-items:center;height:66px}
+.logo{font-size:25px;font-weight:700;color:#fbbf24;letter-spacing:1px}
+.nav a.l{margin-left:22px;font-family:Arial,sans-serif;font-size:14px;color:#d1d9e6}
+.hero{background:linear-gradient(rgba(31,41,55,.45),rgba(31,41,55,.88)),url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201600%20800%27%20width%3D%271600%27%20height%3D%27800%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231d4f91%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%234a90d0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23f6b64a%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cellipse%20cx%3D%27513%27%20cy%3D%27473%27%20rx%3D%2750%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%271532%27%20cy%3D%27376%27%20rx%3D%2780%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27886%27%20cy%3D%2793%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%271050%27%20cy%3D%27371%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27564%27%20cy%3D%27558%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%271404%27%20cy%3D%27324%27%20rx%3D%2780%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27160%27%20cy%3D%27152%27%20rx%3D%27120%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27633%27%20cy%3D%27495%27%20rx%3D%2750%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Ccircle%20cx%3D%271360.0%27%20cy%3D%27656.0%27%20r%3D%27144.0%27%20fill%3D%27%23fff3b0%27%20fill-opacity%3D%27.35%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27440.00000000000006%27%20text-anchor%3D%27middle%27%20font-size%3D%27440%27%20opacity%3D%270.45%27%3E%E2%9B%85%3C%2Ftext%3E%3C%2Fsvg%3E') center/cover;color:#fff;padding:130px 0 120px;text-align:center}
+.hero small{font-family:Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:13px;color:#fcd34d}
+.hero h1{font-size:50px;line-height:1.15;margin:14px auto 18px;max-width:860px}
+.hero p{max-width:720px;margin:0 auto 28px;font-size:18px;color:#e5ebf5}
+.btn{display:inline-block;background:#fbbf24;color:#1f2937;padding:13px 32px;border-radius:6px;font-family:Arial,sans-serif;font-size:15px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-48px;position:relative}
+.stats div{background:#fff;border-radius:10px;padding:22px;text-align:center;box-shadow:0 10px 28px rgba(31,41,55,.14);border-bottom:4px solid #fbbf24}
+.stats b{display:block;font-size:30px;color:#2563a8;font-family:Arial,sans-serif}
+.stats span{font-family:Arial,sans-serif;font-size:13px;color:#64748b}
+.sec{padding:70px 0}
+.sec h2{font-size:34px;margin-bottom:14px;color:#1f2937}
+.sec p{margin-bottom:16px;color:#46556b}
+.lead{font-size:20px;color:#222b38!important}
+.tag{font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#d97706;margin-bottom:8px;display:block}
+.alt{background:#fff;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:26px}
+.grid4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 8px 22px rgba(31,41,55,.09);border:1px solid #e2e8f0}
+.card img{width:100%;height:170px;object-fit:cover;display:block}
+.card div{padding:18px}
+.card h3{font-size:19px;margin-bottom:6px;color:#1f2937}
+.card p{font-size:14.5px;margin:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split img{width:100%;height:340px;object-fit:cover;border-radius:10px}
+.layers{margin-top:26px}
+.layer{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 24px;color:#fff;font-family:Arial,sans-serif;font-size:14px}
+.layer b{font-size:16px;display:block}
+.layer span{min-width:120px;text-align:right;font-size:13px;opacity:.92}
+.l1{background:#3b82c4;border-radius:10px 10px 0 0}.l2{background:#2f6aa5}.l3{background:#265587}.l4{background:#1d4068}.l5{background:#142c4a;border-radius:0 0 10px 10px}
+.tbl{width:100%;border-collapse:collapse;margin-top:20px;font-family:Arial,sans-serif;font-size:15px}
+.tbl th{background:#1f2937;color:#fbbf24;text-align:left;padding:12px 14px}
+.tbl td{padding:12px 14px;border-bottom:1px solid #e2e8f0;color:#46556b}
+.tw{overflow-x:auto}
+.quote{border-left:5px solid #fbbf24;background:#fff8e1;padding:22px 28px;border-radius:0 10px 10px 0;font-size:21px;color:#1f2937;margin:26px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.two div{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px}
+.two h4{color:#2563a8;font-size:17px;margin-bottom:6px}
+.two p{margin:0;font-size:15px}
+.steps{counter-reset:s;margin-top:24px}
+.steps div{position:relative;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:20px 20px 20px 74px;margin-bottom:14px}
+.steps div:before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:38px;height:38px;border-radius:50%;background:#fbbf24;color:#1f2937;font-family:Arial,sans-serif;font-weight:700;text-align:center;line-height:38px}
+.steps h4{font-size:18px;margin-bottom:4px;color:#1f2937}
+.steps p{margin:0;font-size:15px}
+details{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700;color:#1f2937}
+details p{margin:10px 0 0;font-size:15px}
+.end{background:linear-gradient(#2563a8,#1f2937);color:#fff;text-align:center;padding:80px 0}
+.end h2{font-size:34px;margin-bottom:12px}
+.end p{max-width:680px;margin:0 auto 26px;color:#dbe6f5}
+footer{background:#111827;color:#9aa6b8;text-align:center;padding:24px 0;font-family:Arial,sans-serif;font-size:14px}
+@media(max-width:860px){.stats{grid-template-columns:1fr 1fr}.grid,.grid4,.split,.two{grid-template-columns:1fr}.hero h1{font-size:33px}.nav a.l{display:none}.layer{flex-direction:column;align-items:flex-start}.layer span{text-align:left}}
+</style>
+
+<header><div class="wrap nav"><a class="logo" href="#">Vagenix</a><nav><a class="l" href="#basics">Basics</a><a class="l" href="#clouds">Clouds</a><a class="l" href="#storms">Storms</a><a class="l" href="#forecast">Forecasting</a><a class="l" href="#faq">FAQ</a></nav></div></header>
+
+<section class="hero"><div class="wrap">
+<small>A Reading Guide To Weather</small>
+<h1>Your Search Ends Here: Understanding the Weather</h1>
+<p>Vagenix explains in plain language why the sky changes, how clouds and storms form and how forecasters predict what comes next. No science background needed.</p>
+<a class="btn" href="#basics">Start Reading</a>
+</div></section>
+
+<div class="wrap"><div class="stats">
+<div><b>23.5°</b><span>tilt of Earth’s axis, the cause of seasons</span></div>
+<div><b>~12 km</b><span>typical height of the weather layer</span></div>
+<div><b>10</b><span>main cloud types</span></div>
+<div><b>30 yrs</b><span>averaging period used to define climate</span></div>
+</div></div>
+
+<section class="sec" id="basics"><div class="narrow">
+<span class="tag">Chapter 1</span>
+<h2>What is weather?</h2>
+<p class="lead">Weather is simply what the air is doing right now and over the next few days: its temperature, moisture, pressure and movement.</p>
+<p>Nearly all of it is driven by the Sun. Sunlight heats the ground, the ground warms the air, and warm air rises while cooler air sinks. Because Earth is round and tilted, some places receive more heat than others, and the atmosphere is constantly moving to even things out.</p>
+<p>This Vagenix guide builds from that single idea, from raindrops to hurricanes, so each chapter makes the next easier to follow.</p>
+<div class="quote">Weather is the mood of the atmosphere; climate is its personality.</div>
+<p>That well-known saying captures the difference: weather changes by the hour, while climate describes the typical pattern of a place measured over about thirty years.</p>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+<span class="tag">Chapter 2</span>
+<h2>Layers of the atmosphere</h2>
+<p style="max-width:760px">The blanket of air around Earth has five layers. All the weather we experience happens in the lowest one.</p>
+<div class="layers">
+<div class="layer l1"><div><b>Troposphere</b>Clouds, rain, wind and nearly all weather</div><span>0 – 12 km</span></div>
+<div class="layer l2"><div><b>Stratosphere</b>Contains the ozone layer; jets fly near its base</div><span>12 – 50 km</span></div>
+<div class="layer l3"><div><b>Mesosphere</b>Where most meteors burn up</div><span>50 – 85 km</span></div>
+<div class="layer l4"><div><b>Thermosphere</b>Auroras glow here; the space station orbits in it</div><span>85 – 600 km</span></div>
+<div class="layer l5"><div><b>Exosphere</b>The faint edge where air fades into space</div><span>600 km +</span></div>
+</div>
+</div></section>
+
+<section class="sec" id="clouds"><div class="wrap">
+<span class="tag">Chapter 3</span>
+<h2>Find Your Next Favorite Cloud</h2>
+<p style="max-width:760px">Clouds form when rising air cools and its invisible water vapour turns into tiny droplets or ice crystals. Their shape reveals a lot about what the weather will do next.</p>
+<div class="grid grid4">
+<div class="card"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20500%20340%27%20width%3D%27500%27%20height%3D%27340%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231d4f91%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%234a90d0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23f6b64a%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cellipse%20cx%3D%27318%27%20cy%3D%2765%27%20rx%3D%27120%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27407%27%20cy%3D%27176%27%20rx%3D%27120%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27472%27%20cy%3D%27135%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27397%27%20cy%3D%2763%27%20rx%3D%27120%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27461%27%20cy%3D%2740%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Ccircle%20cx%3D%27425.0%27%20cy%3D%27278.8%27%20r%3D%2761.199999999999996%27%20fill%3D%27%23fff3b0%27%20fill-opacity%3D%27.35%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27187.00000000000003%27%20text-anchor%3D%27middle%27%20font-size%3D%27136%27%20opacity%3D%271%27%3E%E2%98%81%EF%B8%8F%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27320%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2718%27%20fill%3D%27white%27%20fill-opacity%3D%27.95%27%3ECumulus%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Cumulus clouds"><div><h3>Cumulus</h3><p>Puffy, cotton-like clouds that usually mean fair weather.</p></div></div>
+<div class="card"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20500%20340%27%20width%3D%27500%27%20height%3D%27340%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231d4f91%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%234a90d0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23f6b64a%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27222%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27278%27%20cy%3D%2726%27%20rx%3D%27120%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%276%27%20cy%3D%27187%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27143%27%20cy%3D%2746%27%20rx%3D%2780%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27390%27%20cy%3D%27204%27%20rx%3D%2750%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Ccircle%20cx%3D%27425.0%27%20cy%3D%27278.8%27%20r%3D%2761.199999999999996%27%20fill%3D%27%23fff3b0%27%20fill-opacity%3D%27.35%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27187.00000000000003%27%20text-anchor%3D%27middle%27%20font-size%3D%27136%27%20opacity%3D%271%27%3E%F0%9F%8C%AB%EF%B8%8F%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27320%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2718%27%20fill%3D%27white%27%20fill-opacity%3D%27.95%27%3EStratus%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Stratus clouds"><div><h3>Stratus</h3><p>Flat grey sheets that bring drizzle or an overcast day.</p></div></div>
+<div class="card"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20500%20340%27%20width%3D%27500%27%20height%3D%27340%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231d4f91%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%234a90d0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23f6b64a%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cellipse%20cx%3D%27316%27%20cy%3D%27158%27%20rx%3D%2780%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%2767%27%20cy%3D%270%27%20rx%3D%2750%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27396%27%20cy%3D%2755%27%20rx%3D%2750%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27148%27%20cy%3D%2780%27%20rx%3D%2750%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27448%27%20cy%3D%27173%27%20rx%3D%27120%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Ccircle%20cx%3D%27425.0%27%20cy%3D%27278.8%27%20r%3D%2761.199999999999996%27%20fill%3D%27%23fff3b0%27%20fill-opacity%3D%27.35%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27187.00000000000003%27%20text-anchor%3D%27middle%27%20font-size%3D%27136%27%20opacity%3D%271%27%3E%F0%9F%8C%A4%EF%B8%8F%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27320%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2718%27%20fill%3D%27white%27%20fill-opacity%3D%27.95%27%3ECirrus%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Cirrus clouds"><div><h3>Cirrus</h3><p>High, wispy ice clouds that can signal a change within a day or two.</p></div></div>
+<div class="card"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20500%20340%27%20width%3D%27500%27%20height%3D%27340%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231d4f91%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%234a90d0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23f6b64a%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cellipse%20cx%3D%2793%27%20cy%3D%27176%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27152%27%20cy%3D%275%27%20rx%3D%2780%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%2784%27%20cy%3D%2737%27%20rx%3D%2780%27%20ry%3D%2714%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27169%27%20cy%3D%2777%27%20rx%3D%27120%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%271%27%20cy%3D%27152%27%20rx%3D%27120%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Ccircle%20cx%3D%27425.0%27%20cy%3D%27278.8%27%20r%3D%2761.199999999999996%27%20fill%3D%27%23fff3b0%27%20fill-opacity%3D%27.35%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27187.00000000000003%27%20text-anchor%3D%27middle%27%20font-size%3D%27136%27%20opacity%3D%271%27%3E%E2%9B%88%EF%B8%8F%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27320%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2718%27%20fill%3D%27white%27%20fill-opacity%3D%27.95%27%3ECumulonimbus%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Cumulonimbus clouds"><div><h3>Cumulonimbus</h3><p>Towering storm clouds that bring heavy rain, hail and lightning.</p></div></div>
+</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap"><div class="split">
+<img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20900%20680%27%20width%3D%27900%27%20height%3D%27680%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231d4f91%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%234a90d0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23f6b64a%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cellipse%20cx%3D%27346%27%20cy%3D%2733%27%20rx%3D%2780%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27838%27%20cy%3D%27156%27%20rx%3D%2780%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27323%27%20cy%3D%2794%27%20rx%3D%2780%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27721%27%20cy%3D%2790%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%2723%27%20cy%3D%27383%27%20rx%3D%2780%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Ccircle%20cx%3D%27765.0%27%20cy%3D%27557.6%27%20r%3D%27122.39999999999999%27%20fill%3D%27%23fff3b0%27%20fill-opacity%3D%27.35%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27374.00000000000006%27%20text-anchor%3D%27middle%27%20font-size%3D%27272%27%20opacity%3D%271%27%3E%F0%9F%92%A7%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27660%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2737%27%20fill%3D%27white%27%20fill-opacity%3D%27.95%27%3EThe%20water%20cycle%3C%2Ftext%3E%3C%2Fsvg%3E" alt="The water cycle">
+<div><span class="tag">Chapter 4</span><h2>The water cycle</h2>
+<p>Water never leaves the planet; it simply travels in a loop. Sun-warmed oceans, lakes and plants release vapour, the vapour rises and condenses into clouds, and the water falls back as rain, snow or hail.</p>
+<p>Rivers and groundwater then carry it to the sea again. A single water molecule may spend days in the air but thousands of years in the deep ocean or in ice.</p></div>
+</div></div></section>
+
+<section class="sec" id="storms"><div class="wrap">
+<span class="tag">Chapter 5</span>
+<h2>Wind, fronts and storms</h2>
+<p style="max-width:760px">Wind is air moving from high pressure toward low pressure. Where warm and cold air masses meet, they form boundaries called fronts, and these meetings are where much of the active weather happens.</p>
+<div class="two">
+<div><h4>Thunderstorms</h4><p>Strong updrafts build towering clouds. Lightning is a giant electrical spark, several times hotter than the surface of the Sun, and thunder is the shock wave of that heating air.</p></div>
+<div><h4>Tornadoes</h4><p>Narrow, rotating columns of air that reach the ground, usually spawned by severe thunderstorms.</p></div>
+<div><h4>Hurricanes and cyclones</h4><p>Huge spinning storms that draw energy from warm ocean water and weaken quickly over land.</p></div>
+<div><h4>Snow and ice</h4><p>When the air stays below freezing as ice crystals fall, snow reaches the ground. Slight warm layers can turn it to sleet or freezing rain.</p></div>
+</div>
+<div class="tw"><table class="tbl"><tr><th>Hurricane category</th><th>Sustained wind (km/h)</th><th>Typical effect</th></tr>
+<tr><td>1</td><td>119 – 153</td><td>Damage to roofs, trees and power lines</td></tr>
+<tr><td>2</td><td>154 – 177</td><td>Extensive damage to roofs and small trees</td></tr>
+<tr><td>3</td><td>178 – 208</td><td>Devastating damage; major hurricane</td></tr>
+<tr><td>4</td><td>209 – 251</td><td>Catastrophic damage to homes</td></tr>
+<tr><td>5</td><td>252 or higher</td><td>Most buildings severely damaged or destroyed</td></tr></table></div>
+</div></section>
+
+<section class="sec alt"><div class="narrow">
+<span class="tag">Chapter 6</span>
+<h2>Why we have seasons</h2>
+<p>Many people think summer happens because Earth is closer to the Sun, but that is not so. Seasons come from Earth’s 23.5-degree tilt. When your hemisphere leans toward the Sun, sunlight arrives more directly and days are longer, so it is warmer.</p>
+<p>Six months later the same hemisphere leans away, light arrives at a lower angle and the days shorten. Near the equator the effect is small, which is why tropical places have wet and dry seasons instead of hot and cold ones.</p>
+</div></section>
+
+<section class="sec" id="forecast"><div class="narrow">
+<span class="tag">Chapter 7</span>
+<h2>Explore What’s New in Forecasting</h2>
+<p>At Vagenix we find forecasts easiest to understand step by step. Modern forecasts rely on a worldwide network of measurements fed into powerful computers. Here is how a forecast is built.</p>
+<div class="steps">
+<div><h4>Observe</h4><p>Weather stations, balloons, ships, aircraft and satellites record temperature, pressure, wind and moisture.</p></div>
+<div><h4>Scan with radar</h4><p>Radar sends out radio waves that bounce off raindrops, showing where rain or storms are moving.</p></div>
+<div><h4>Run the models</h4><p>Supercomputers solve the physics of the atmosphere to simulate how conditions will change hour by hour.</p></div>
+<div><h4>Interpret and share</h4><p>Meteorologists compare model results, add local knowledge and issue forecasts and warnings.</p></div>
+</div>
+<p style="margin-top:18px">Newer machine-learning systems now help produce forecasts faster, though human experts still check the results. Forecasts remain most reliable within about a week.</p>
+</div></section>
+
+<section class="sec alt"><div class="wrap"><div class="split">
+<div><span class="tag">Chapter 8</span><h2>Make A Choice Today: Be Weather-Ready</h2>
+<p>Most weather harm can be reduced with preparation. A few simple habits make a real difference when a storm, heat wave or cold snap arrives.</p>
+<p>Know the warnings used in your area, keep a charged phone and a small emergency kit, and have a safe place to shelter. In heat, drink water and avoid strenuous outdoor work at midday; in storms, stay away from open fields and tall isolated trees.</p></div>
+<img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20900%20680%27%20width%3D%27900%27%20height%3D%27680%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231d4f91%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%234a90d0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23f6b64a%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cellipse%20cx%3D%2718%27%20cy%3D%27281%27%20rx%3D%2780%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27385%27%20cy%3D%27296%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%2747%27%20cy%3D%27362%27%20rx%3D%2750%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27201%27%20cy%3D%2760%27%20rx%3D%2750%27%20ry%3D%2720%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Cellipse%20cx%3D%27352%27%20cy%3D%27262%27%20rx%3D%2780%27%20ry%3D%2728%27%20fill%3D%27white%27%20fill-opacity%3D%27.14%27%2F%3E%3Ccircle%20cx%3D%27765.0%27%20cy%3D%27557.6%27%20r%3D%27122.39999999999999%27%20fill%3D%27%23fff3b0%27%20fill-opacity%3D%27.35%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27374.00000000000006%27%20text-anchor%3D%27middle%27%20font-size%3D%27272%27%20opacity%3D%271%27%3E%F0%9F%8C%88%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27660%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2737%27%20fill%3D%27white%27%20fill-opacity%3D%27.95%27%3EAfter%20the%20storm%3C%2Ftext%3E%3C%2Fsvg%3E" alt="A rainbow after a storm">
+</div></div></section>
+
+<section class="sec" id="faq"><div class="narrow">
+<h2>Questions people ask</h2>
+<details><summary>Why is the sky blue?</summary><p>Air scatters short blue wavelengths of sunlight more than long red ones, so blue light reaches our eyes from every direction.</p></details>
+<details><summary>What causes a rainbow?</summary><p>Sunlight enters raindrops, bends, reflects inside and bends again, splitting into colours. You see one when the Sun is behind you and rain is ahead.</p></details>
+<details><summary>Is weather the same as climate?</summary><p>No. Weather is short-term conditions, while climate is the long-term average pattern for a region.</p></details>
+<details><summary>How do I know thunder is far away?</summary><p>Count the seconds between a flash and the thunder, then divide by three to get the distance in kilometres.</p></details>
+</div></section>
+
+<section class="end"><div class="wrap">
+<h2>Look Up, Look Around, Keep Learning</h2>
+<p>Every cloud, breeze and shower follows rules that science can explain. We hope this Vagenix guide helps you read the sky with a little more confidence.</p>
+<a class="btn" href="#basics">Back To The Top</a>
+</div></section>
+
+<footer><div class="wrap">&copy; 2026 Vagenix. All rights reserved.</div></footer>
+</body>
